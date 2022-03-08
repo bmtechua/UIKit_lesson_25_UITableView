@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //5. add identifier
     let identefier = "myCell"
     //20. add array littyerals
-    var arr = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    var arr = ["10", "20", "30", "40", "50", "60", "70", "8", "9"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +51,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //    }
     //12. add quantity cells
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //13. about switch case correct number Sections
+  //      13. about switch case correct number Sections
 //        switch section {
 //        case 0:
 //            return 3
@@ -74,10 +74,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 //        //15 add output text
 //        cell.textLabel?.text = "section - \(indexPath.section), cell - \(indexPath.row)"
 //        //18. add accessory (detailButton)
-//        cell.accessoryType = .detailButton
+        cell.accessoryType = .detailButton
         
         //17. add background color cell of sections
-//
+//        switch indexPath.section {
+//        case 0:
+//            cell.backgroundColor = UIColor.red
+//        case 1:
+//            cell.backgroundColor = UIColor.blue
+//        case 2:
+//            cell.backgroundColor = UIColor.green
+//        default:
+//            break
+//        }
+
         
         //16. return cell
         return cell
@@ -94,6 +104,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let ownerCe4ll = tableView.cellForRow(at: indexPath)
         print("Cell title =", ownerCe4ll?.textLabel?.text ?? "nil")
+    }
+    //21. print index row
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
 
 
